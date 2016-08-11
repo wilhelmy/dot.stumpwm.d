@@ -1,0 +1,6 @@
+modules/
+
+### CommonLisp ###
+*.FASL
+*.fasl
+*.lisp-temp
