@@ -70,7 +70,12 @@ Load a file that re-defines swank and then calls it."
 ;  (0 t t :create "emacs-dump" :class "Emacs"))
 
 (gnewbg "Pidgin")
+(gnewbg "WWW")
 
 (define-frame-preference "Pidgin"
-  (0 t nil :class "Pidgin" :role "pidgin_buddylist")
-  (1 t nil :class "Pidgin" :role "conversation"))
+  (2 t t :create "pidgin.dump" :class "Pidgin" :instance "Pidgin" :title nil :role nil)
+  (0 t t :create "pidgin.dump" :class "Pidgin" :instance "Pidgin" :title nil :role "buddy_list")
+  (1 t t :create "pidgin.dump" :class "Pidgin" :instance "Pidgin" :title nil :role "conversation"))
+
+(define-frame-preference "WWW"
+  (0 t t :create "www.dump" :class "Firefox"))
