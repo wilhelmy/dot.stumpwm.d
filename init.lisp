@@ -73,16 +73,17 @@ Load a file that re-defines swank and then calls it."
    ("colon"     . "colon")                         ;; Command execution / debugging
    ("semicolon" . "eval")
 
-   ("1"      . "select-window-by-number 0")        ;; Window selection keybindings
-   ("2"      . "select-window-by-number 1")
-   ("3"      . "select-window-by-number 2")
-   ("4"      . "select-window-by-number 3")
-   ("5"      . "select-window-by-number 4")
-   ("6"      . "select-window-by-number 5")
-   ("7"      . "select-window-by-number 6")
-   ("8"      . "select-window-by-number 7")
-   ("9"      . "select-window-by-number 8")
-   ("0"      . "select-window-by-number 9")
+   ("quoteleft" . "select-window-by-number 0")      ;; Window selection keybindings
+   ("1"      . "select-window-by-number 1")
+   ("2"      . "select-window-by-number 2")
+   ("3"      . "select-window-by-number 3")
+   ("4"      . "select-window-by-number 4")
+   ("5"      . "select-window-by-number 5")
+   ("6"      . "select-window-by-number 6")
+   ("7"      . "select-window-by-number 7")
+   ("8"      . "select-window-by-number 8")
+   ("9"      . "select-window-by-number 9")
+   ("0"      . "select-window-by-number 10")
 
    ("F1"     . "gselect 1")                        ;; Group keybindings
    ("F2"     . "gselect 2")
