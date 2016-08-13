@@ -2,7 +2,8 @@
 
 (in-package :stumpwm)
 
-(set-prefix-key (kbd "C-t")
+;(set-prefix-key (kbd "C-t"))
+(set-prefix-key (kbd "quoteleft"))
 
 ;; Message window font
 ;(set-font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-15")
@@ -20,6 +21,8 @@ Load a file that re-defines swank and then calls it."
    "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
 ;;
 (define-key *root-map* (kbd "C-s") "swank")
+(define-key *root-map* (kbd "C-quoteleft") #'pull-hidden-other)
+(define-key *root-map* (kbd "quoteleft") #'send-escape)
 
 ;; enable mode-line
 (mode-line)
