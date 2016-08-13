@@ -1,0 +1,9 @@
+My personal stumpwm configuration
+
+Special features compared to vanilla stumpwm:
+* restores saved layouts and fixed groups on startup
+* popup notifications for urgency hints
+* using a prefix key feels clunky so I put a lot of keybindings into *top-map*
+* includes swank so that I can connect emacs via 'slime-connect' (from EmacsWiki)
+
+Tested with SBCL. Seems to work. Have fun!

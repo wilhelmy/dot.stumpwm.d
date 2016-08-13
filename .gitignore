@@ -1,4 +1,6 @@
 modules/
+dumps/
+data/
 
 ### CommonLisp ###
 *.FASL
