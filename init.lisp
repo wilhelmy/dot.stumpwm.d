@@ -27,6 +27,13 @@ Load a file that re-defines swank and then calls it."
 ;; enable mode-line
 (mode-line)
 
+;;; Urgency Hooks
+(defvar *urgent-popup-format* "^72^BUrgent: ~a")
+(defun urgent-window-popup (window)
+  "Pop up message stating the window title, in case a window sets the urgency hint"
+  (message *urgent-popup-format* (escape-caret (window-name window))))
+(add-hook *urgent-window-hook* #'urgent-window-popup)
+
 ;;; Define window placement policy...
 
 ;; Clear rules
