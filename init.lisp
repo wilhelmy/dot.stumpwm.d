@@ -110,8 +110,13 @@ Load a file that re-defines swank and then calls it."
 
 ;(sync-keys) ; gotta make sure they're actually working
 
-;; enable mode-line
+;; load modules
+(mapcar #'load-module '("battery-portable"))
+
+;; mode-line settings
 (mode-line)
+(setq *time-modeline-string* "%m-%e %k:%M")
+(setq *screen-mode-line-format* "%W^> %B | %d")
 
 ;;; Urgency Hooks
 (defvar *urgent-popup-format* "^24^BUrgent: ~a")
@@ -130,9 +135,9 @@ Load a file that re-defines swank and then calls it."
 (mapcar #'gnewbg '("Pidgin" "Web" "Code" "Extra"))
 
 (define-frame-preference "Pidgin"
-  (2 t t :create "pidgin" :restore "pidgin" :class "Pidgin" :instance "Pidgin" :title nil :role nil)
-  (0 t t :create "pidgin" :restore "pidgin" :class "Pidgin" :instance "Pidgin" :title nil :role "buddy_list")
-  (1 t t :create "pidgin" :restore "pidgin" :class "Pidgin" :instance "Pidgin" :title nil :role "conversation"))
+    (2 t t :create "pidgin" :restore "pidgin" :class "Pidgin" :instance "Pidgin" :title nil :role nil)
+    (0 t t :create "pidgin" :restore "pidgin" :class "Pidgin" :instance "Pidgin" :title nil :role "buddy_list")
+    (1 t t :create "pidgin" :restore "pidgin" :class "Pidgin" :instance "Pidgin" :title nil :role "conversation"))
 
 (define-frame-preference "Web"
     (0 t t :create "web" :restore "web" :class "Firefox"))
