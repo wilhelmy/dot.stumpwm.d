@@ -46,6 +46,7 @@ Load a file that re-defines swank and then calls it."
   "Start pidgin unless it is already running, in which case focus it."
   (run-or-raise "pidgin" '(:class "Pidgin")))
 
+(setq *window-number-map* "1234567890") ; start window numbers at 1 instead of 0
 
 ;; Keymap - all of these start with "s-" so I made a nifty wrapper which
 ;; involves copy-pasting a bit less boilerplate code.
@@ -73,8 +74,7 @@ Load a file that re-defines swank and then calls it."
    ("colon"     . "colon")                         ;; Command execution / debugging
    ("semicolon" . "eval")
 
-   ("quoteleft" . "select-window-by-number 0")      ;; Window selection keybindings
-   ("1"      . "select-window-by-number 1")
+   ("1"      . "select-window-by-number 1")        ;; Window selection keybindings
    ("2"      . "select-window-by-number 2")
    ("3"      . "select-window-by-number 3")
    ("4"      . "select-window-by-number 4")
